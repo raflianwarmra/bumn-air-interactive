@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BUMN Air · Model Kelembagaan Interaktif</title>
+<meta name="description" content="Penjelasan interaktif empat model kelembagaan BUMN Air: Holding, Bulk Services, Konsesi & O&M, dan End-to-End, serta rekomendasi tiga kanal.">
+<meta name="theme-color" content="#f4f6f8">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e07b1f'/%3E%3Cpath d='M16 6c4 6 7 9.5 7 13a7 7 0 0 1-14 0c0-3.5 3-7 7-13z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:'Atkinson Hyperlegible Next';font-style:normal;font-weight:400 800;font-display:swap;src:url(data:font/woff2;base64,/*FONT*/) format('woff2');}
+/*CSS*/
+</style>
+</head>
+<body>
+<a class="skip" href="#models" data-t="skip"></a>
+
+<header class="bar" id="bar">
+  <a class="brand" href="#top" aria-label="BUMN Air">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8"/><path d="M16 6c4 6 7 9.5 7 13a7 7 0 0 1-14 0c0-3.5 3-7 7-13z"/></svg>
+    <span><b data-t="brand"></b><small data-t="brandSub"></small></span>
+  </a>
+  <nav class="nav" aria-label="Bagian">
+    <a href="#problem" data-t="navProblem"></a>
+    <a href="#models" data-t="navModels"></a>
+    <a href="#rec" data-t="navRec"></a>
+  </nav>
+  <div class="bar-actions">
+    <button class="btn btn-tour" id="tourBtn" type="button">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>
+      <span data-t="tour"></span>
+    </button>
+    <div class="seg" role="group" aria-label="Bahasa / Language">
+      <button type="button" data-lang="id" aria-pressed="true">ID</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ============ PROBLEM ============ -->
+  <section class="problem" id="problem" aria-labelledby="heroTitle">
+    <div class="problem-copy">
+      <p class="kicker" data-t="heroKicker"></p>
+      <h1 id="heroTitle"><span data-t="heroTitleA"></span><br><span class="h1-strong" data-t="heroTitleB"></span></h1>
+      <p class="lede" data-t="heroLede"></p>
+    </div>
+    <figure class="map">
+      <svg id="mapSvg" viewBox="0 0 1000 330" role="img" aria-labelledby="mapCap"></svg>
+      <figcaption id="mapCap" data-t="mapCaption"></figcaption>
+    </figure>
+    <ol class="facts">
+      <li><b data-t="fact1n"></b> <span data-t="fact1"></span></li>
+      <li><b data-t="fact2n"></b> <span data-t="fact2"></span></li>
+      <li><b data-t="fact3n"></b> <span data-t="fact3"></span></li>
+    </ol>
+    <div class="question">
+      <p data-t="heroQuestion"></p>
+      <a class="btn btn-primary" href="#models"><span data-t="heroCta"></span>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v9M3.5 8 8 12.5 12.5 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </section>
+
+  <!-- ============ MODELS ============ -->
+  <section class="models" id="models" aria-labelledby="modelsTitle">
+    <div class="models-head">
+      <h2 id="modelsTitle" data-t="modelsTitle"></h2>
+      <p class="lede" data-t="modelsLede"></p>
+    </div>
+
+    <div class="spectrum" id="spectrum">
+      <div class="spec-ends" aria-hidden="true">
+        <span><b data-t="specLeft"></b><small data-t="specLeftSub"></small></span>
+        <span class="r"><b data-t="specRight"></b><small data-t="specRightSub"></small></span>
+      </div>
+      <div class="spec-rail" id="specRail" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0">
+        <div class="spec-line"><div class="spec-fill" id="specFill"></div></div>
+        <div class="spec-stops" id="specStops"></div>
+        <div class="spec-thumb" id="specThumb" aria-hidden="true"></div>
+      </div>
+      <div class="spec-labels" id="specLabels"></div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-main">
+        <div class="diagram-scroll" id="diagramScroll">
+          <svg id="diagram" viewBox="0 0 1000 600" role="img" aria-labelledby="modelName modelSummary"></svg>
+        </div>
+        <p class="drag-hint" data-t="dragHint"></p>
+        <div class="toolbar">
+          <div class="flows" role="group" aria-labelledby="flowsLbl">
+            <span id="flowsLbl" class="tb-label" data-t="flowsLabel"></span>
+            <button type="button" class="chip on" data-flow="water" aria-pressed="true"><i class="sw sw-water"></i><span data-t="flowWater"></span></button>
+            <button type="button" class="chip on" data-flow="money" aria-pressed="true"><i class="sw sw-money"></i><span data-t="flowMoney"></span></button>
+            <button type="button" class="chip on" data-flow="auth" aria-pressed="true"><i class="sw sw-auth"></i><span data-t="flowAuth"></span></button>
+          </div>
+          <ul class="legend" aria-label="Legenda">
+            <li><i class="dot gov"></i><span data-t="legendGov"></span></li>
+            <li><i class="dot bumn"></i><span data-t="legendBumn"></span></li>
+            <li><i class="dot pdam"></i><span data-t="legendPdam"></span></li>
+            <li><i class="dot cust"></i><span data-t="legendCust"></span></li>
+            <li><i class="dot lost"></i><span data-t="legendLost"></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="panel" aria-live="polite">
+        <div class="panel-head">
+          <p class="panel-tag" id="modelTag"></p>
+          <h3 id="modelName"></h3>
+          <p class="tagline" id="modelTagline"></p>
+          <p class="summary" id="modelSummary"></p>
+        </div>
+
+        <div class="compare-row">
+          <button type="button" class="btn btn-ghost" id="compareBtn" aria-pressed="false">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="3" width="5.5" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="3" width="5.5" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 1.6"/></svg>
+            <span id="compareLabel" data-t="compare"></span>
+          </button>
+          <span class="compare-hint" id="compareHint" data-t="compareHint"></span>
+        </div>
+
+        <div class="meters" id="meters"></div>
+        <dl class="score" id="score"></dl>
+
+        <div class="proscons">
+          <div><h4 data-t="pros"></h4><p id="pros"></p></div>
+          <div><h4 data-t="cons"></h4><p id="cons"></p></div>
+        </div>
+
+        <div class="lens">
+          <h4 data-t="lensTitle"></h4>
+          <div class="seg seg-lens" role="tablist" id="lensTabs">
+            <button type="button" role="tab" data-lens="pemda" aria-selected="true" data-t="lensPemda"></button>
+            <button type="button" role="tab" data-lens="investor" aria-selected="false" data-t="lensInvestor"></button>
+            <button type="button" role="tab" data-lens="customer" aria-selected="false" data-t="lensCustomer"></button>
+          </div>
+          <p class="lens-text" id="lensText" role="tabpanel"></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ RECOMMENDATION ============ -->
+  <section class="rec" id="rec" aria-labelledby="recTitle">
+    <div class="rec-head">
+      <p class="kicker" data-t="recKicker"></p>
+      <h2 id="recTitle" data-t="recTitle"></h2>
+      <p class="lede" data-t="recLede"></p>
+    </div>
+    <div class="rec-body">
+      <div class="rec-pick">
+        <h3 data-t="recAsk"></h3>
+        <div class="rec-options" id="recOptions" role="radiogroup"></div>
+        <label class="switch" id="variantWrap">
+          <input type="checkbox" id="variantToggle">
+          <span class="switch-ui" aria-hidden="true"></span>
+          <span data-t="recVariant"></span>
+        </label>
+      </div>
+      <div class="rec-view">
+        <svg id="recSvg" viewBox="0 0 640 360" role="img" aria-labelledby="recTitle"></svg>
+        <dl class="rec-detail">
+          <div><dt data-t="recStructure"></dt><dd id="recStructure"></dd></div>
+          <div><dt data-t="recPemda"></dt><dd id="recPemda"></dd></div>
+          <div><dt data-t="recContract"></dt><dd id="recContract"></dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="rec-note" data-t="recNote"></p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p data-t="footer"></p>
+  <p class="keys" data-t="keys"></p>
+</footer>
+
+<div class="tour" id="tour" hidden role="dialog" aria-modal="false" aria-labelledby="tourText">
+  <div class="tour-progress"><div class="tour-progress-fill" id="tourFill"></div></div>
+  <p class="tour-count" id="tourCount"></p>
+  <p class="tour-text" id="tourText"></p>
+  <div class="tour-actions">
+    <button type="button" class="btn btn-ghost" id="tourPrev"><span data-t="tourPrev"></span></button>
+    <button type="button" class="btn btn-primary" id="tourNext"><span id="tourNextLabel" data-t="tourNext"></span></button>
+    <button type="button" class="tour-close" id="tourClose" data-t-aria="tourClose">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+/*DATA*/
+</script>
+<script>
+/*APP*/
+</script>
+</body>
+</html>
